@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TravelTourCrawler.Models
+﻿namespace TravelTourCrawler.Models
 {
     public class Tour
     {
-        [Key]
         public int Id { get; set; }
         public string? Title { get; set; }
         public string? Url { get; set; }
@@ -15,7 +12,7 @@ namespace TravelTourCrawler.Models
         public string? DepartureTime { get; set; }
         public string? Transportation { get; set; }
         public string? Price { get; set; }
-        public string? Source { get; set; }
+        public string Source { get; set; } = "Dynamic";
         public DateTime CrawledTime { get; set; } = DateTime.UtcNow;
     }
 }

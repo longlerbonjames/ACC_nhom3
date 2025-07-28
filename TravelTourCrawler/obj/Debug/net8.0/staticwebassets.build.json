@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"GhQz8pJP7tJWtRLsNEcERgnYo8aFIF/XChOoVonOroM=","Source":"TravelTourCrawler","BasePath":"_content/TravelTourCrawler","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "blfae7xeO+TbLgQy5h11K1yhhaBFIB6oJMiaWkrFWpM=",
+  "Source": "TravelTourCrawler",
+  "BasePath": "_content/TravelTourCrawler",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
