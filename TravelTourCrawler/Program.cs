@@ -1,7 +1,7 @@
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using TravelTourCrawler.Data;
 using TravelTourCrawler.Services;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure; // 🆕 THÊM dòng này nếu chưa có
 
 namespace TravelTourCrawler
 {
@@ -12,9 +12,7 @@ namespace TravelTourCrawler
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -25,8 +23,12 @@ namespace TravelTourCrawler
                 client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0");
             });
 
+            // ✅ CẤU HÌNH DÙNG MySQL (không phải SQL Server)
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            var serverVersion = new MySqlServerVersion(new Version(8, 0, 36)); // Đổi đúng version MySQL
+
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseMySql(connectionString, serverVersion));
 
             var app = builder.Build();
 
@@ -38,12 +40,8 @@ namespace TravelTourCrawler
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }
