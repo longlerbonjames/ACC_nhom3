@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TravelTourCrawler.Data;
 using TravelTourCrawler.DTO;
 using TravelTourCrawler.Models;
 using TravelTourCrawler.Services;
@@ -10,43 +12,49 @@ namespace TravelTourCrawler.Controllers
     public class ToursController : ControllerBase
     {
         private readonly IEnumerable<ITourCrawler> _tourCrawlers;
+        private readonly ApplicationDbContext _context;
         private readonly ILogger<ToursController> _logger;
 
         public ToursController(
             IEnumerable<ITourCrawler> tourCrawlers,
+            ApplicationDbContext context,
             ILogger<ToursController> logger)
         {
             _tourCrawlers = tourCrawlers;
+            _context = context;
             _logger = logger;
         }
 
+        // ✅ GET: api/tours
+        [HttpGet]
+        public async Task<IActionResult> GetAllTours()
+        {
+            var tours = await _context.Tours
+                .OrderByDescending(t => t.CrawledTime)
+                .ToListAsync();
+            return Ok(tours);
+        }
+
+        // ✅ GET: api/tours/crawl?url=https://otrip.vn/...
         [HttpGet("crawl")]
-        public async Task<IActionResult> GetAllTours([FromQuery] string url)
+        public async Task<IActionResult> CrawlFromUrl([FromQuery] string url)
         {
             if (string.IsNullOrWhiteSpace(url))
                 return BadRequest(new { error = "URL is required" });
 
-            try
-            {
-                _logger.LogInformation($"User requested crawl from: {url}");
+            _logger.LogInformation($"Start crawling from URL: {url}");
 
-                // Gọi crawler phù hợp (ở đây giả định chỉ có OTripCrawler)
-                var otripCrawler = _tourCrawlers.FirstOrDefault(c => c.Source == "OTrip") as OTripCrawler;
-                if (otripCrawler == null)
-                    return NotFound(new { error = "OTrip crawler not found" });
+            var crawler = _tourCrawlers.FirstOrDefault(c => c.Source == "OTrip");
+            if (crawler is not OTripCrawler otrip)
+                return NotFound(new { error = "OTrip crawler not found" });
 
-                var tours = await otripCrawler.CrawlToursAsync(url);
-                return Ok(tours);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error crawling from custom URL");
-                return StatusCode(500, new { error = "Internal server error" });
-            }
+            var tours = await otrip.CrawlToursAsync(url);
+            return Ok(tours);
         }
 
+        // ✅ POST: api/tours/crawl (với JSON selector)
         [HttpPost("crawl")]
-        public async Task<IActionResult> CrawlDynamic([FromBody] CrawlRequestDto request)
+        public async Task<IActionResult> CrawlCustom([FromBody] CrawlRequestDto request)
         {
             var crawler = _tourCrawlers.FirstOrDefault(c => c.Source == "OTrip");
             if (crawler is OTripCrawler otrip)
@@ -55,13 +63,47 @@ namespace TravelTourCrawler.Controllers
                 return Ok(tours);
             }
 
-            return NotFound("Crawler not found");
+            return NotFound("OTrip crawler not available");
         }
 
+        // ✅ GET: api/tours/sources (cho frontend chọn nguồn sau này)
         [HttpGet("sources")]
         public IActionResult GetAvailableSources()
         {
-            return Ok(new[] { "OTrip", "VietnamBooking" });
+            var sources = _tourCrawlers.Select(c => c.Source).Distinct().ToList();
+            return Ok(sources);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTour(int id)
+        {
+            var tour = await _context.Tours.FindAsync(id);
+            if (tour == null)
+            {
+                return NotFound();
+            }
+
+            _context.Tours.Remove(tour);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateTour(int id, [FromBody] Tour updatedTour)
+        {
+            var existing = await _context.Tours.FindAsync(id);
+            if (existing == null)
+                return NotFound();
+
+            existing.Title = updatedTour.Title;
+            existing.Destination = updatedTour.Destination;
+            existing.Price = updatedTour.Price;
+            existing.Duration = updatedTour.Duration;
+            existing.DepartureTime = updatedTour.DepartureTime;
+            existing.ImageUrl = updatedTour.ImageUrl;
+            existing.Url = updatedTour.Url;
+
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

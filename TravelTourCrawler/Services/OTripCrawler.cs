@@ -40,7 +40,9 @@ namespace TravelTourCrawler.Services
             {
                 foreach (var node in tourNodes)
                 {
+                    //Console.WriteLine(node.InnerHtml);
                     var tour = new Tour { Source = "OTrip" };
+                    
 
                     // Title & URL
                     var titleNode = node.SelectSingleNode($".//{dto.TitleSelector}");
@@ -159,13 +161,14 @@ namespace TravelTourCrawler.Services
                                 tour.Url = titleNode.GetAttributeValue("href", "");
                             }
 
-                            var imageNode = tourNode.SelectSingleNode(".//img");
-                            if (imageNode != null)
-                            {
-                                tour.ImageUrl = imageNode.GetAttributeValue("src", "");
-                            }
+                        var imageNode = tourNode.SelectSingleNode(".//img");
+                        if (imageNode != null)
+                        {
+                            tour.ImageUrl = imageNode.GetAttributeValue("src", "") ?? imageNode.GetAttributeValue("data-src", "");
+                        }
 
-                            var detailNodes = tourNode.SelectNodes(".//div[contains(@class, 'item-content-detail')]");
+
+                        var detailNodes = tourNode.SelectNodes(".//div[contains(@class, 'item-content-detail')]");
                             if (detailNodes != null)
                             {
                                 foreach (var detailNode in detailNodes)

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TravelTourCrawler.Data;
 using TravelTourCrawler.Services;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure; // 🆕 THÊM dòng này nếu chưa có
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace TravelTourCrawler
 {
@@ -23,16 +23,26 @@ namespace TravelTourCrawler
                 client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0");
             });
 
-            // ✅ CẤU HÌNH DÙNG MySQL (không phải SQL Server)
+            // ✅ CẤU HÌNH CORS CHO REACT (http://localhost:5173)
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173") // ✅ ĐÚNG PORT VITE
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
+
+            // ✅ CẤU HÌNH DÙNG MySQL
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 36)); // Đổi đúng version MySQL
+            var serverVersion = new MySqlServerVersion(new Version(8, 0, 36));
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(connectionString, serverVersion));
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -40,7 +50,12 @@ namespace TravelTourCrawler
             }
 
             app.UseHttpsRedirection();
+
+            // ✅ BẬT CORS TRƯỚC Authorization
+            app.UseCors("AllowReactApp");
+
             app.UseAuthorization();
+
             app.MapControllers();
             app.Run();
         }
