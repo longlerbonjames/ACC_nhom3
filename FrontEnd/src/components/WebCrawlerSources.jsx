@@ -1,6 +1,6 @@
-// src/components/CrawlerSelectorTable.jsx
 import React, { useEffect, useState } from 'react';
 import { Table, Button, Space, Modal, Form, Input, message } from 'antd';
+
 import axios from 'axios';
 
 const defaultValues = {
@@ -18,6 +18,7 @@ const CrawlerSelectorTable = () => {
   const [form] = Form.useForm();
   const [editingItem, setEditingItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   const fetchData = async () => {
     try {
@@ -50,7 +51,7 @@ const CrawlerSelectorTable = () => {
   };
 
   const handleCreate = () => {
-    form.resetFields();
+    form.setFieldsValue(defaultValues);
     setEditingItem(null);
     setIsModalOpen(true);
   };
@@ -92,39 +93,30 @@ const CrawlerSelectorTable = () => {
 
   return (
     <div style={{ padding: 24 }}>
+      <h2>Crawler Selector Table</h2>
+  
       <Button type="primary" onClick={handleCreate} style={{ marginBottom: 16 }}>
-        Add New
+        Add Selector
       </Button>
-      <Table rowKey="id" dataSource={data} columns={columns} />
+      <Table
+        dataSource={Array.isArray(data) ? data : []}
+        columns={columns}
+        rowKey="id"
+        bordered
+      />
 
       <Modal
-        title={editingItem ? 'Edit Selector' : 'Create Selector'}
+        title={editingItem ? 'Edit Selector' : 'Add New Selector'}
         open={isModalOpen}
         onCancel={() => setIsModalOpen(false)}
         onOk={() => form.submit()}
       >
-        <Form form={form} layout="vertical" onFinish={handleFinish} initialValues={defaultValues}>
-          <Form.Item name="url" label="Url" rules={[{ required: true }]}>
-            <Input />
-          </Form.Item>
-          <Form.Item name="listContainerClass" label="List Container Class" rules={[{ required: true }]}>
-            <Input />
-          </Form.Item>
-          <Form.Item name="titleSelector" label="Title Selector">
-            <Input />
-          </Form.Item>
-          <Form.Item name="imageSelector" label="Image Selector">
-            <Input />
-          </Form.Item>
-          <Form.Item name="detailContainerClass" label="Detail Container Class">
-            <Input />
-          </Form.Item>
-          <Form.Item name="labelClass" label="Label Class">
-            <Input />
-          </Form.Item>
-          <Form.Item name="priceClass" label="Price Class">
-            <Input />
-          </Form.Item>
+        <Form form={form} layout="vertical" onFinish={handleFinish}>
+          {Object.keys(defaultValues).map((key) => (
+            <Form.Item key={key} name={key} label={key} rules={[{ required: true }]}>
+              <Input />
+            </Form.Item>
+          ))}
         </Form>
       </Modal>
     </div>

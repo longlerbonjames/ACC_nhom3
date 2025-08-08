@@ -11,6 +11,8 @@ import {
   Input,
 } from 'antd';
 import axios from 'axios';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 const { Title } = Typography;
 
@@ -157,6 +159,7 @@ const TourTable = () => {
 
   return (
     <div style={{ width: '100%', overflowX: 'auto'}}>
+      
       <Title level={3}>Danh sách tour đã crawl</Title>
      <Table
     dataSource={tours}
