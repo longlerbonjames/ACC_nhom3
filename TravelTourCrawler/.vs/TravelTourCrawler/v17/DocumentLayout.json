@@ -7,20 +7,32 @@
       "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:services\\otripcrawler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\services\\itourcrawler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:services\\itourcrawler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|d:\\ta\\project-4\\acc_nhom3\\traveltourcrawler\\traveltourcrawler.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:traveltourcrawler.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\controllers\\tourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:controllers\\tourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\dto\\crawlrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:dto\\crawlrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\services\\itourcrawler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:services\\itourcrawler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\traveltourcrawler.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:traveltourcrawler.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +43,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|9c4464da-5f27-4ab4-a948-2999357d46d7MSSQL__/_localdb__MSSQLLocalDB/TravelTour/True/SqlTable/Create dbo.Tours.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB36E459-C16D-4125-938D-DB39B85F1BDD}|TravelTourCrawler.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +52,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -60,7 +64,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "CrawlRequestDto.cs",
+              "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\DTO\\CrawlRequestDto.cs",
+              "RelativeDocumentMoniker": "DTO\\CrawlRequestDto.cs",
+              "ToolTip": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\DTO\\CrawlRequestDto.cs",
+              "RelativeToolTip": "DTO\\CrawlRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T02:29:48.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "TravelTourCrawler.http",
               "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\TravelTourCrawler.http",
               "RelativeDocumentMoniker": "TravelTourCrawler.http",
@@ -68,12 +85,11 @@
               "RelativeToolTip": "TravelTourCrawler.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-07-23T06:57:48.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T06:57:48.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ITourCrawler.cs",
               "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Services\\ITourCrawler.cs",
               "RelativeDocumentMoniker": "Services\\ITourCrawler.cs",
@@ -81,8 +97,7 @@
               "RelativeToolTip": "Services\\ITourCrawler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T04:52:24.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T04:52:24.052Z"
             },
             {
               "$type": "Document",
@@ -92,50 +107,50 @@
               "RelativeDocumentMoniker": "Services\\OTripCrawler.cs",
               "ToolTip": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Services\\OTripCrawler.cs",
               "RelativeToolTip": "Services\\OTripCrawler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAP8AAAAAAAAAAAAuwBQBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-23T04:44:52.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAmAAAAAAAAAA==",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBMAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-23T04:02:15.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-23T04:01:36.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ToursController.cs",
               "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Controllers\\ToursController.cs",
               "RelativeDocumentMoniker": "Controllers\\ToursController.cs",
               "ToolTip": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Controllers\\ToursController.cs",
               "RelativeToolTip": "Controllers\\ToursController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA9wCIAAAApAAAAAAAAAA==",
+              "ViewState": "AQIAACkAAAAAAAAAAAAuwDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-23T04:00:49.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -147,19 +162,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Tour.cs",
               "DocumentMoniker": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Models\\Tour.cs",
               "RelativeDocumentMoniker": "Models\\Tour.cs",
               "ToolTip": "D:\\TA\\Project-4\\ACC_nhom3\\TravelTourCrawler\\Models\\Tour.cs",
               "RelativeToolTip": "Models\\Tour.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA4wA0AAAAtAAAAAAAAAA==",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBIAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-23T04:41:48.677Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Create dbo.Tours.sql",
               "DocumentMoniker": "9c4464da-5f27-4ab4-a948-2999357d46d7MSSQL__/_localdb__MSSQLLocalDB/TravelTour/True/SqlTable/Create dbo.Tours.sql",
               "ToolTip": "9c4464da-5f27-4ab4-a948-2999357d46d7MSSQL__/_localdb__MSSQLLocalDB/TravelTour/True/SqlTable/Create dbo.Tours.sql",
@@ -168,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "dbo.Tours.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TravelTour/True/SqlTable/dbo.Tours.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TravelTour/True/SqlTable/dbo.Tours.sql",

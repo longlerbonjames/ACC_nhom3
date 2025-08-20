@@ -56,8 +56,32 @@ namespace TravelTourCrawler.Services
                     var imageNode = node.SelectSingleNode($".//{dto.ImageSelector}");
                     if (imageNode != null)
                     {
-                        tour.ImageUrl = imageNode.GetAttributeValue("src", "");
+                        var outer = imageNode.OuterHtml;
+                        _logger.LogInformation("IMG NODE: " + imageNode.OuterHtml);
+                        Console.WriteLine("IMG NODE: " + outer);
+
+                        string src = imageNode.GetAttributeValue("src", "");
+                        string dataLazy = imageNode.GetAttributeValue("data-lazy-src", "");
+                        string dataSrc = imageNode.GetAttributeValue("data-src", "");
+                        string srcset = imageNode.GetAttributeValue("srcset", "");
+
+                        Console.WriteLine($"src={src} | data-lazy-src={dataLazy} | data-src={dataSrc} | srcset={srcset}");
+
+                        // Nếu src là placeholder hoặc rỗng => lấy từ data-lazy-src
+                        if (string.IsNullOrWhiteSpace(src) || src.StartsWith("data:image"))
+                        {
+                            if (!string.IsNullOrWhiteSpace(dataLazy))
+                                src = dataLazy;
+                            else if (!string.IsNullOrWhiteSpace(dataSrc))
+                                src = dataSrc;
+                            else if (!string.IsNullOrWhiteSpace(srcset))
+                                src = srcset.Split(',').FirstOrDefault()?.Trim().Split(' ')[0];
+
+                        }
+
+                        tour.ImageUrl = src;
                     }
+
 
                     // Detail fields
                     var detailNodes = node.SelectNodes($".//div[contains(@class, '{dto.DetailContainerClass}')]");
@@ -126,7 +150,7 @@ namespace TravelTourCrawler.Services
             {
                 _logger.LogInformation("No new tours to save (all already exist in DB or duplicate in source)");
             }
-
+            
             return tours;
         }
 
@@ -229,7 +253,7 @@ namespace TravelTourCrawler.Services
                     .ToList();
 
                 ////// Lưu vào DB
-                if (newTours.Any())
+                /*/if (newTours.Any())
                 {
                     await _context.Tours.AddRangeAsync(newTours);
                     await _context.SaveChangesAsync();
@@ -238,7 +262,7 @@ namespace TravelTourCrawler.Services
                 else
                 {
                     _logger.LogInformation("No new tours to save (all already exist in DB or duplicate in source)");
-                }
+                }/*/
 
 
                 return tours;

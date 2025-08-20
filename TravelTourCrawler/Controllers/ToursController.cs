@@ -87,6 +87,7 @@ namespace TravelTourCrawler.Controllers
 
             return NoContent();
         }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTour(int id, [FromBody] Tour updatedTour)
         {

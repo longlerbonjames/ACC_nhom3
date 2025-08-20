@@ -16,6 +16,6 @@ namespace TravelTourCrawler.Models
         public string? Transportation { get; set; }
         public string? Price { get; set; }
         public string? Source { get; set; }
-        public DateTime CrawledTime { get; set; } = DateTime.UtcNow;
+        public DateTime CrawledTime { get; set; } = DateTime.UtcNow;    
     }
 }
